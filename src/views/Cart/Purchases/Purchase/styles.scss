@@ -1,0 +1,40 @@
+.close {
+  font-size: 1.3em;
+}
+
+.purchase {
+  display: flex;
+  width: 100%;
+  margin-bottom: 5px;
+
+  img {
+    display: block;
+    height: 200px;
+    width: 190px;
+    margin-right: 20px;
+  }
+  &-description {
+    text-transform: capitalize;
+  }
+  &-name {
+    text-transform: uppercase;
+  }
+  &__details {
+    width: 100%;
+  }
+
+  &__info-row {
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #000000;
+
+    .close,
+    .counter {
+      margin-left: auto;
+      margin-right: 0;
+      align-items: center;
+    }
+  }
+}

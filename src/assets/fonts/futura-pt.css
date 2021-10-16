@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Futura PT';
+    src: url('FuturaPT-Light.eot');
+    src: local('Futura PT Light'), local('FuturaPT-Light'),
+        url('FuturaPT-Light.eot?#iefix') format('embedded-opentype'),
+        url('FuturaPT-Light.woff') format('woff'),
+        url('FuturaPT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}

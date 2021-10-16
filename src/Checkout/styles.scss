@@ -1,0 +1,37 @@
+.checkout {
+  background-color: #f0efea;
+  min-width: 392px;
+  min-height: 547px;
+  width: 33%;
+  height: 45%;
+  padding-top: 40px;
+  padding-left: 21px;
+  padding-right: 31px;
+  margin-left: auto;
+  margin-right: 0;
+  h2 {
+    margin-bottom: 30px;
+  }
+  > div {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    > div {
+      width: 50%;
+      max-width: 150px;
+    }
+    > div:nth-child(2) {
+      text-align: right;
+    }
+  }
+  &-coupon {
+    width: 100%;
+    font-size: 0.88em;
+    height: 60px;
+    padding: 21px;
+    background-color: #f0efea;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+  }
+}

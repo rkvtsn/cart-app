@@ -1,0 +1,14 @@
+.icon {
+  vertical-align: middle;
+  display: inline-block;
+  font-style: normal;
+  height: 20px;
+  width: 20px;
+
+  &-rub {
+    width: unset;
+    &::before {
+      content: '\20BD';
+    }
+  }
+}
