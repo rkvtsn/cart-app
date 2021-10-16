@@ -1,8 +1,8 @@
 import { useCallback, useMemo } from 'react';
 import Purchases from './Purchases';
 import Recommendations from './Recommendations';
+import Checkout from './Checkout';
 import { CartProps } from './types';
-import Checkout from 'Checkout';
 import './styles.scss';
 
 const Cart = ({ purchases, recommended, onChangePurchases }: CartProps) => {
@@ -27,7 +27,7 @@ const Cart = ({ purchases, recommended, onChangePurchases }: CartProps) => {
           <div className="cart-info">
             Закажите на сумму от 10 000 и мы доставим заказ бесплатно!*
           </div>
-          <div className="cart-disclaimer">
+          <div className="cart-disclaimer highlight">
             Товары будут зарезервированы на 60 минут
           </div>
           <Purchases

@@ -31,19 +31,21 @@ const Checkout = ({
         <input
           type="text"
           placeholder="Введите промокод"
-          className="checkout-coupon"
+          className="checkout__coupon"
         />
       </div>
 
       <div>
-        <div>итого</div>
+        <div className="uppercase">итого</div>
         <div>
           {finalTotalPrice}
           <i className="icon icon-rub" />
         </div>
       </div>
 
-      <button>оформить заказ</button>
+      <div>
+        <button className="checkout__btn-order">оформить заказ</button>
+      </div>
     </div>
   );
 };

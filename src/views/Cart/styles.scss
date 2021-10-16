@@ -1,16 +1,18 @@
-@import '/src/assets/styles/variables';
-
 .cart {
   padding: 40px;
   &-body {
     display: flex;
   }
+  &-title {
+    margin-bottom: 40px;
+  }
+  &-info {
+    margin-bottom: 58px;
+  }
 
   &-disclaimer {
     font-size: 0.9em;
     font-weight: bold;
-    color: $main-color;
     padding: 26px 0;
-    padding-left: 40px;
   }
 }

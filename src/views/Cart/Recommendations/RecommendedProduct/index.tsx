@@ -16,7 +16,7 @@ const RecommendedProduct = ({
       <ProductPhoto name={name} image={image} />
       <HeartIcon />
       <div className="recommended-product__name">{name}</div>
-      <div className="recommended-product__description">{description}</div>
+      <div className="recommended-product__description highlight">{description}</div>
       <div className="recommended-product__info">
         <div>{value}мл</div>
         <div className="recommended-product__info-price">
