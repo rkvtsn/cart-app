@@ -9,6 +9,7 @@ export const findOldPurchase = (
 };
 
 export const findLastIdPurchase = (purchases: Purchase[]) => {
+  if (!purchases.length) return 1;
   return Math.max.apply(
     Math,
     purchases.map(({ id }) => id)

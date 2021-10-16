@@ -21,7 +21,6 @@
   }
   &__details {
     width: 100%;
-    min-width: 50%;
   }
 
   &__info-row {
@@ -29,6 +28,7 @@
     align-items: center;
     padding: 20px 0;
     border-bottom: 1px solid #000000;
+    max-width: 500px;
 
     .close,
     .counter {
@@ -38,3 +38,5 @@
     }
   }
 }
+
+

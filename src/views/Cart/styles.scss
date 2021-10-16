@@ -1,13 +1,18 @@
 .cart {
-  padding: 40px;
   &-body {
     display: flex;
   }
+
   &-title {
     margin-bottom: 40px;
   }
+
   &-info {
     margin-bottom: 58px;
+  }
+
+  &-content {
+    width: 100%;
   }
 
   &-disclaimer {
