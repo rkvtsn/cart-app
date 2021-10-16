@@ -16,7 +16,9 @@ const RecommendedProduct = ({
       <ProductPhoto name={name} image={image} />
       <HeartIcon />
       <div className="recommended-product__name">{name}</div>
-      <div className="recommended-product__description highlight">{description}</div>
+      <div className="recommended-product__description highlight">
+        {description}
+      </div>
       <div className="recommended-product__info">
         <div>{value}мл</div>
         <div className="recommended-product__info-price">
@@ -26,7 +28,7 @@ const RecommendedProduct = ({
       </div>
       <button className="recommended-product__add">
         <span className="recommended-product__add-text">в корзину</span>
-        <span className="recommended-product__add-icon">+</span>
+        <span className="recommended-product__add-icon">&#43;</span>
       </button>
     </div>
   );

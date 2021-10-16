@@ -13,12 +13,10 @@ function App() {
     setRecomended(MockRecomended);
   }, []);
 
-  const handleChangePurhcases = useCallback(() => {}, []);
-
   return (
     <div>
       <Cart
-        onChangePurchases={handleChangePurhcases}
+        onChangePurchases={setPurchases}
         purchases={purchases}
         recommended={recomended}
       />

@@ -1,9 +1,12 @@
 import { PurchaseProps } from './types';
-import Counter from './Counter';
+import Counter from 'components/Counter';
 import './styles.scss';
 
-const Purchase = ({ product, count, onUpdatePurchase }: PurchaseProps) => {
-  const handleChangeCount = () => {};
+const Purchase = ({ onUpdatePurchase, ...purchase }: PurchaseProps) => {
+  const { product, count } = purchase;
+  const handleChangeCount = (value: number) => {
+    onUpdatePurchase({ ...purchase, count: value });
+  };
   const handleRemovePurchase = () => {};
   return (
     <div className="purchase">
@@ -23,7 +26,7 @@ const Purchase = ({ product, count, onUpdatePurchase }: PurchaseProps) => {
             {product.price}
             <i className="icon icon-rub" />
           </span>
-          <Counter onChange={handleChangeCount} value={count} />
+          <Counter min={1} onChange={handleChangeCount} value={count} />
         </div>
       </div>
     </div>

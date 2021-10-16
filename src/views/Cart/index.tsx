@@ -8,13 +8,13 @@ import './styles.scss';
 const Cart = ({ purchases, recommended, onChangePurchases }: CartProps) => {
   const totalPrice = useMemo(() => {
     return purchases.reduce(function (a, b) {
-      return a + b.product.price;
+      return a + b.product.price * b.count;
     }, 0);
   }, [purchases]);
 
   const finalTotalPrice = useMemo(() => {
     return purchases.reduce(function (a, b) {
-      return a + b.product.price;
+      return a + b.product.price * b.count;
     }, 0);
   }, [purchases]);
 
