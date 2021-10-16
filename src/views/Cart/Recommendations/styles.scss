@@ -1,7 +1,31 @@
+@import '/src/assets/styles/variables';
+
 .recommendations {
+  .recommended {
+    margin: auto;
+    display: flex;
+    gap: 100px;
+  }
+
   width: 100%;
-  margin-top: 150px;
   h2 {
     margin-bottom: 80px;
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .recommendations {
+    .recommended {
+      width: fit-content;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .recommendations {
+    .recommended {
+      gap: 50px;
+      flex-direction: column;
+    }
   }
 }

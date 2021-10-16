@@ -54,3 +54,13 @@ button {
   cursor: pointer;
   font-size: 1em;
 }
+
+@media (max-width: $breakpoint-sm) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    text-align: center;
+  }
+}

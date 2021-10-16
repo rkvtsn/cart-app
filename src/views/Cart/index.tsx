@@ -26,29 +26,36 @@ const Cart = ({ purchases, recommended, onChangePurchases }: CartProps) => {
     <div className="cart">
       <div className="cart-body">
         <div className="cart-content">
-          <h2 className="cart-title">Корзина ({purchases.length})</h2>
-          <div className="cart-info">
-            Закажите на сумму от 10 000 и мы доставим заказ бесплатно!*
+          <div className="cart-header">
+            <h2 className="cart-title">Корзина ({purchases.length})</h2>
+            <div className="cart-info">
+              Закажите на сумму от 10 000 и мы доставим заказ бесплатно!*
+            </div>
           </div>
           <div className="cart-disclaimer highlight">
             Товары будут зарезервированы на 60 минут
           </div>
 
-          <Purchases
-            purchases={purchases}
-            onChangePurchase={onChangePurchase}
-            onDeletePurchase={onDeletePurchase}
-          />
+          <div className="cart-purchases">
+            <Purchases
+              purchases={purchases}
+              onChangePurchase={onChangePurchase}
+              onDeletePurchase={onDeletePurchase}
+            />
+          </div>
         </div>
 
-        <Checkout
-          finalTotalPrice={finalTotalPrice}
-          totalPrice={totalPrice}
-          onDiscount={onChangeDiscount}
-        />
+        <div className="cart-checkout">
+          <Checkout
+            finalTotalPrice={finalTotalPrice}
+            totalPrice={totalPrice}
+            onDiscount={onChangeDiscount}
+          />
+        </div>
       </div>
-
-      <Recommendations recommended={recommended} onAddToCart={onAddProduct} />
+      <div className="cart-recommendations">
+        <Recommendations recommended={recommended} onAddToCart={onAddProduct} />
+      </div>
     </div>
   );
 };

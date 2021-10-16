@@ -1,56 +1,55 @@
 @import '/src/assets/styles/variables';
 
-.recommended {
-  display: flex;
+.recommended-product {
+  width: 150px;
+  // margin-right: 100px;
+  &:last-child {
+    margin-right: 0;
+  }
 
-  &-product {
-    width: 150px;
-    margin-right: 100px;
+  &__name {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    margin-top: 21.5px;
+  }
 
-    &__name {
-      text-transform: uppercase;
-      font-size: 0.9em;
-      margin-top: 21.5px;
+  &__description {
+    text-transform: lowercase;
+    min-height: 40px;
+    font-size: 0.75em;
+    margin-top: 2.42px;
+    margin-bottom: 26.42px;
+  }
+
+  &__info {
+    display: flex;
+    &-price {
+      margin-left: auto;
+      margin-right: 0;
     }
+    margin-bottom: 10px;
+  }
 
-    &__description {
-      text-transform: lowercase;
-      min-height: 40px;
-      font-size: 0.75em;
-      margin-top: 2.42px;
-      margin-bottom: 26.42px;
-    }
-
-    &__info {
+  &__add {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 13px 0;
+    width: 100%;
+    vertical-align: middle;
+    font-weight: bold;
+    display: flex;
+    &-text {
       display: flex;
-      &-price {
-        margin-left: auto;
-        margin-right: 0;
-      }
-      margin-bottom: 10px;
-    }
-
-    &__add {
-      border-top: 1px solid #000;
-      border-bottom: 1px solid #000;
-      padding: 13px 0;
-      width: 100%;
+      font-weight: bolder;
       vertical-align: middle;
-      font-weight: bold;
-      display: flex;
-      &-text {
-        display: flex;
-        font-weight: bolder;
-        vertical-align: middle;
-        margin-left: auto;
-        font-size: 0.88em;
-      }
-      &-icon {
-        font-size: 1.9em;
-        margin-right: 0;
-        line-height: 0.6;
-        margin-left: 10px;
-      }
+      margin-left: auto;
+      font-size: 0.88em;
+    }
+    &-icon {
+      font-size: 1.9em;
+      margin-right: 0;
+      line-height: 0.6;
+      margin-left: 10px;
     }
   }
 }
