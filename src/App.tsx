@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Product } from 'domains/Product';
 import { Purchase } from 'domains/Purchase';
 import { MockPurchases, MockRecomended } from 'mock/cart';

@@ -2,13 +2,26 @@ import { PurchaseProps } from './types';
 import Counter from 'components/Counter';
 import Clipart from 'components/Clipart';
 import './styles.scss';
+import { useCallback } from 'react';
 
-const Purchase = ({ onUpdatePurchase, ...purchase }: PurchaseProps) => {
+const Purchase = ({
+  onUpdatePurchase,
+  onDeletePurchase,
+  ...purchase
+}: PurchaseProps) => {
   const { product, count } = purchase;
-  const handleChangeCount = (value: number) => {
-    onUpdatePurchase({ ...purchase, count: value });
-  };
-  const handleRemovePurchase = () => {};
+
+  const handleChangeCount = useCallback(
+    (value: number) => {
+      onUpdatePurchase({ ...purchase, count: value });
+    },
+    [onUpdatePurchase, purchase]
+  );
+
+  const handleRemovePurchase = useCallback(() => {
+    onDeletePurchase(purchase.id);
+  }, [purchase.id, onDeletePurchase]);
+
   return (
     <div className="purchase">
       <div className="purchase__image">
@@ -22,7 +35,9 @@ const Purchase = ({ onUpdatePurchase, ...purchase }: PurchaseProps) => {
             {product.value}
             мл
           </div>
-          <button className="close">×</button>
+          <button className="close" onClick={handleRemovePurchase}>
+            ×
+          </button>
         </div>
         <div className="purchase__info-row">
           <span>
