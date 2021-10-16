@@ -1,9 +1,14 @@
 import { Images } from './constants';
 import { ClipartProps } from './types';
+import './style.scss';
 
-const Clipart = ({ image }: ClipartProps) => {
+const Clipart = ({ image, alt }: ClipartProps) => {
   const imageSrc = image && image in Images ? Images[image] : undefined;
-  return <img src={imageSrc} alt={image} />;
+  return (
+    <div className="clipart">
+      <img src={imageSrc} alt={alt} />
+    </div>
+  );
 };
 
 export default Clipart;

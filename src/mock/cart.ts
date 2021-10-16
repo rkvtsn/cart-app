@@ -31,6 +31,7 @@ const MockHandCreamDetstvo: Product = {
   description: 'Moisturizing & Repairing',
   value: 150,
   price: 2500,
+  image: 'detstvoCream',
 };
 
 const MockSuspiriaGel: Product = {
@@ -39,6 +40,7 @@ const MockSuspiriaGel: Product = {
   description: 'Love Gel',
   value: 50,
   price: 2500,
+  image: 'suspiriaGel',
 };
 
 const MockPurchases: Purchase[] = [

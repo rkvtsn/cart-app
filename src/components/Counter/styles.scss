@@ -3,8 +3,11 @@
 
   > * {
     display: block;
-    width: 20px;
+    min-width: 20px;
     text-align: center;
+  }
+  > div {
+    padding: 0 8px;
   }
   button {
     font-size: 1.3em;

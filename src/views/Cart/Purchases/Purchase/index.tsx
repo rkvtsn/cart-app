@@ -1,5 +1,6 @@
 import { PurchaseProps } from './types';
 import Counter from 'components/Counter';
+import Clipart from 'components/Clipart';
 import './styles.scss';
 
 const Purchase = ({ onUpdatePurchase, ...purchase }: PurchaseProps) => {
@@ -10,7 +11,9 @@ const Purchase = ({ onUpdatePurchase, ...purchase }: PurchaseProps) => {
   const handleRemovePurchase = () => {};
   return (
     <div className="purchase">
-      <img src={product.image} alt={product.name} />
+      <div className="purchase__image">
+        <Clipart image={product.image} alt={product.name} />
+      </div>
       <div className="purchase__details">
         <div className="purchase__info-row">
           <div>
