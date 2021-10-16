@@ -1,6 +1,6 @@
 import { RecommendationsProps } from './types';
-import './styles.scss';
 import RecommendedProduct from './RecommendedProduct';
+import './styles.scss';
 
 const Recommendations = ({ recommended }: RecommendationsProps) => {
   return (

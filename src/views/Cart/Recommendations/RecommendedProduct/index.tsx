@@ -10,10 +10,11 @@ const RecommendedProduct = ({
   description,
   price,
   value,
+  photo,
 }: RecommendedProductProps) => {
   return (
     <div className="recommended-product">
-      <ProductPhoto name={name} image={image} />
+      <ProductPhoto name={name} image={image} photo={photo} />
       <HeartIcon />
       <div className="recommended-product__name">{name}</div>
       <div className="recommended-product__description highlight">

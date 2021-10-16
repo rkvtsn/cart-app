@@ -1,8 +1,3 @@
-export interface RecommendedProductProps {
-  id: number;
-  name: string;
-  image?: string;
-  description: string;
-  price: number;
-  value: number;
-}
+import { Product } from 'domains/Product';
+
+export interface RecommendedProductProps extends Product {}

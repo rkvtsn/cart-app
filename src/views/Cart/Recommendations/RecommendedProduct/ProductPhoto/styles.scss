@@ -1,4 +1,24 @@
 .product-photo {
-    height: 190px;
-    width: 145px;
+  height: 190px;
+  width: 145px;
+  position: relative;
+
+  &__polaroid {
+    background: no-repeat url('fzm-Polaroid.png');
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &-photo {
+      position: absolute;
+      top: 4px;
+      left: 5px;
+      width: 126px;
+      height: 143px;
+    }
+  }
+  &__product {
+    position: absolute;
+    right: -20px;
+    bottom: 0px;
+  }
 }

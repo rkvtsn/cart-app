@@ -7,6 +7,8 @@ const MockDetstvo: Product = {
   description: 'Gentle Hand & Body Wash',
   value: 150,
   price: 3500,
+  image: 'detstvo',
+  photo: 'polaroidDetstvo',
 };
 
 const MockPrekrasnoeDalyoko: Product = {
@@ -15,6 +17,8 @@ const MockPrekrasnoeDalyoko: Product = {
   description: 'Moisturizing & Repairing Hand Cream',
   value: 150,
   price: 3500,
+  image: 'prekrasnoeDalyoko',
+  photo: 'polaroidPrekrasnoe',
 };
 
 const MockSuspiria: Product = {
@@ -23,6 +27,8 @@ const MockSuspiria: Product = {
   description: 'bath tea',
   value: 150,
   price: 3500,
+  image: 'suspiria',
+  photo: 'polaroidSuspiria',
 };
 
 const MockHandCreamDetstvo: Product = {
@@ -32,6 +38,7 @@ const MockHandCreamDetstvo: Product = {
   value: 150,
   price: 2500,
   image: 'detstvoCream',
+  photo: 'polaroidDetstvo',
 };
 
 const MockSuspiriaGel: Product = {
@@ -41,6 +48,7 @@ const MockSuspiriaGel: Product = {
   value: 50,
   price: 2500,
   image: 'suspiriaGel',
+  photo: 'polaroidSuspiria',
 };
 
 const MockPurchases: Purchase[] = [
