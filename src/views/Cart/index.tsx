@@ -3,6 +3,7 @@ import Purchases from './Purchases';
 import Recommendations from './Recommendations';
 import Checkout from './Checkout';
 import { CartProps } from './types';
+import { findLastIdPurchase, findOldPurchase } from './utils';
 import './styles.scss';
 
 const Cart = ({ purchases, recommended, onChangePurchases }: CartProps) => {
@@ -18,6 +19,48 @@ const Cart = ({ purchases, recommended, onChangePurchases }: CartProps) => {
     }, 0);
   }, [purchases]);
 
+  const handleChangePurchase = useCallback(
+    ({ count, id: purchaseId }) => {
+      const purchaseIndex = purchases.findIndex(({ id }) => id === purchaseId);
+      if (purchaseIndex < 0) return;
+      const purchasesChanged = [...purchases];
+      purchasesChanged[purchaseIndex] = {
+        ...purchasesChanged[purchaseIndex],
+        count: count || 0,
+      };
+      onChangePurchases(purchasesChanged);
+    },
+    [onChangePurchases, purchases]
+  );
+
+  const handleDeletePurchase = useCallback(
+    ({ id: purchaseId }) => {
+      onChangePurchases(purchases.filter(({ id }) => id !== purchaseId));
+    },
+    [onChangePurchases, purchases]
+  );
+
+  const handleAddToCart = useCallback(
+    (addedProduct) => {
+      const oldPurchase = findOldPurchase(purchases, addedProduct);
+      if (oldPurchase) {
+        const updatedPurchase = { ...oldPurchase };
+        updatedPurchase.count = updatedPurchase.count + 1;
+        handleChangePurchase(updatedPurchase);
+      } else {
+        onChangePurchases([
+          ...purchases,
+          {
+            id: findLastIdPurchase(purchases) + 1,
+            product: { ...addedProduct },
+            count: 1,
+          },
+        ]);
+      }
+    },
+    [purchases, onChangePurchases, handleChangePurchase]
+  );
+
   const handleChangeDiscount = useCallback(() => {}, []);
   return (
     <div className="cart">
@@ -30,11 +73,14 @@ const Cart = ({ purchases, recommended, onChangePurchases }: CartProps) => {
           <div className="cart-disclaimer highlight">
             Товары будут зарезервированы на 60 минут
           </div>
+
           <Purchases
             purchases={purchases}
-            onChangePurchases={onChangePurchases}
+            onChangePurchase={handleChangePurchase}
+            onDeletePurchase={handleDeletePurchase}
           />
         </div>
+
         <Checkout
           finalTotalPrice={finalTotalPrice}
           totalPrice={totalPrice}
@@ -44,7 +90,7 @@ const Cart = ({ purchases, recommended, onChangePurchases }: CartProps) => {
 
       <Recommendations
         recommended={recommended}
-        onChangePurchases={onChangePurchases}
+        onAddToCart={handleAddToCart}
       />
     </div>
   );

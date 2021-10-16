@@ -32,7 +32,7 @@ const MockSuspiria: Product = {
 };
 
 const MockHandCreamDetstvo: Product = {
-  id: 1,
+  id: 4,
   name: 'Hand Cream DETSTVO',
   description: 'Moisturizing & Repairing',
   value: 150,
@@ -42,7 +42,7 @@ const MockHandCreamDetstvo: Product = {
 };
 
 const MockSuspiriaGel: Product = {
-  id: 1,
+  id: 5,
   name: 'SUSPIRIA',
   description: 'Love Gel',
   value: 50,

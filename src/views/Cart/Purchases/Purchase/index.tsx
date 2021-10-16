@@ -1,8 +1,8 @@
-import { PurchaseProps } from './types';
+import { useCallback } from 'react';
 import Counter from 'components/Counter';
 import Clipart from 'components/Clipart';
+import { PurchaseProps } from './types';
 import './styles.scss';
-import { useCallback } from 'react';
 
 const Purchase = ({
   onUpdatePurchase,
@@ -19,8 +19,8 @@ const Purchase = ({
   );
 
   const handleRemovePurchase = useCallback(() => {
-    onDeletePurchase(purchase.id);
-  }, [purchase.id, onDeletePurchase]);
+    onDeletePurchase(purchase);
+  }, [purchase, onDeletePurchase]);
 
   return (
     <div className="purchase">

@@ -2,5 +2,6 @@ import { Purchase } from 'domains/Purchase';
 
 export interface PurchasesProps {
   purchases: Purchase[];
-  onChangePurchases: (purchase: Purchase[]) => void;
+  onDeletePurchase: (purchase: Purchase) => void;
+  onChangePurchase: (purchase: Purchase) => void;
 }
